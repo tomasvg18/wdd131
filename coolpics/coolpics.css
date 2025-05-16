@@ -93,7 +93,7 @@ footer {
         grid-template-columns: 1fr;
     }
     nav ul {
-        display: block;  /* Always show ul inside nav */
+        display: block; 
         justify-content: center;
         list-style-type: none;
         padding: 0;
@@ -113,7 +113,7 @@ footer {
     }
     nav ul {
     
-        display: flex;  /* Show as flex on medium+ screens */
+        display: flex; 
         justify-content: center;
         padding: 0;
         list-style-type: none;
@@ -144,77 +144,60 @@ footer {
 }
 
 .viewer {
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    background: rgba(0, 0, 0, 0.75);
-    display: grid;
-    place-items: center;
-    z-index: 10;
-    transition: opacity 0.3s ease-in-out;
-}
-
-  .viewer img {
-    max-width: 90%;
-    max-height: 90%;
-    object-fit: contain;
-}
-
-dialog {
   position: fixed;
+  top: 0;
+  left: 0;
   width: 100vw;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.6);
   z-index: 9999;
   display: flex;
+  place-items: center;
   justify-content: center;
   align-items: center;
 }
 
-dialog:not([open]) {
-  display: none;
-}
-
-.modal-content {
-  position: relative;
-  max-width: 90vw;
-  max-height: 90vh;
-  display: flex;
-  justify-content: center;  
-  align-items: center;      
-}
-
-#modal-img {
+.viewer .image-container {
+  position: relative; 
+  display: inline-block; 
   max-width: 70vw;
   max-height: 70vh;
-  object-fit: contain;
-  border-radius: 4px;
-  display: block;
 }
 
-dialog:not([open]) {
+.viewer .image-container .close {
+position: absolute;
+top: -44px;
+right: -37px;
+border: none;  
+background: white;
+font-size: 1.5rem;
+padding: 0.5rem 0.75rem;
+cursor: pointer;
+box-shadow: 0 0 5px rgba(0,0,0,0.2);
+z-index: 2;
+
+
+}
+
+.viewer:not(.show) {
   display: none;
 }
+
+
+.viewer img {
+display: block;
+max-width: 70vw;
+max-height: 70vh; 
+}
+
+
+
 
 .image-wrapper {
   position: relative;
-  display: inline-block; 
+  display: inline-block;
 }
 
- .close-viewer {
-  position: absolute;
-  top: -10px;    
-  right: -38px;    
-  background: white;
-  border: none;
-  font-size: 1.2rem;
-  padding: 0.5rem 0.75rem;
-  cursor: pointer;
-  border-radius: 0 0 0 8px;
-  box-shadow: 0 0 5px rgba(0,0,0,0.2);
-}
 
 
 .viewer.show {

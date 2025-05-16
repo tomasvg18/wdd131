@@ -8,7 +8,7 @@ menuButton.addEventListener("click", toggleMenu);
 
 function closeViewer() {
   div = document.querySelector("#viewer-div");
-  div.remove();
+  if (div) div.remove();
 }
 
 function handleResize() {
@@ -23,47 +23,46 @@ function handleResize() {
   handleResize();
   window.addEventListener("resize", handleResize);
 
-function viewerTemplate(pic, alt) {
-  return `<div id="viewer-div" class="viewer">
-    <span class="close" onclick="closeViewer()">&times;</span>
-    <img class="viewer-content" id="img01" src="${pic}" alt="${alt}">
-    </div>`;
+function viewerTemplate(src, alt) {
+    return `
+    <div class="viewer show" id="viewer-div">
+      <div class="image-container">
+        <button class="close" aria-label="Close modal">&times;</button>
+        <img src="${src}" alt="${alt}" />
+      </div>
+    </div>
+    `;
 }
-
-const modal = document.createElement('dialog');
-modal.innerHTML = `
-  <div class="modal-content">
-    <button class="close-viewer">X</button>
-    <img id="modal-img" src="" alt="">
-  </div>
-`;
-document.body.appendChild(modal);
 
 
 function viewHandler(event) {
     const img = event.target.closest('img');
     if (!img) return;
-  
-    const filename = img.src.split('/').pop(); 
-    const baseName = filename.split('-')[0];  
-    const fullSrc = `${baseName}-full.jpeg`;
-  
-    const modalImg = modal.querySelector('#modal-img');
-    modalImg.src = fullSrc;
-    modalImg.alt = img.alt;
-  
-    modal.showModal();
-  }
+     const fullSrc = 'norris-full.jpeg';
 
-  modal.querySelector('.close-viewer').addEventListener('click', () => {
-    modal.close();
-  });
+    closeViewer();
+    
+    const viewerHTML = viewerTemplate(fullSrc, img.alt);
+    document.body.insertAdjacentHTML("beforeend", viewerHTML);
 
-  modal.addEventListener('click', (e) => {
-    if (e.target === modal) modal.close();
-  });
+    document.querySelector("#viewer-div .close").addEventListener("click", closeViewer);
+
+//this will close the viwer if you click out of the image as well
+    document.querySelector("#viewer-div").addEventListener("click", (e) => {
+        if (e.target.id === "viewer-div") {
+            closeViewer();
+        }
+    });
+}
+
 
 const galleryImages = document.querySelectorAll(".gallery-image");
 galleryImages.forEach((img) => {
     img.addEventListener("click", viewHandler);
 });
+
+
+
+
+
+  //decided to mess around with how the modal is displayed, honestly I like it better than the viewhandler function but I included the view handler function due to the rubric. 
