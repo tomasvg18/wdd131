@@ -36,6 +36,11 @@ nav {
 justify-self: end;
 width: 100%;
 padding-right: 100px;
+border-top: 2px solid #ccc;
+border-bottom: 2px solid #ccc;
+padding: 10px 0;
+max-width: 2000px;
+margin: 0 auto;
 }
 
 
