@@ -1,0 +1,112 @@
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2; 
+    color: #333; 
+}
+
+h1, h2, h3 {
+    font-family: 'Lora', serif; 
+    margin: 0;
+}
+
+a {
+    color: #f2f2f2; 
+    text-decoration: none;
+    text-align: right;
+}
+
+header {
+  display: grid;
+  grid-template-rows: auto auto; /* two rows: one for h1, one for nav */
+  justify-items: center; /* center the h1 */
+  align-items: start;
+  padding: 20px;
+  background-color: #792eda;
+}
+
+header h1 {
+    font-size: 36px; 
+    margin: 10px;
+    color: #fff; 
+}
+
+nav {
+justify-self: end;
+width: 100%;
+padding-right: 100px;
+}
+
+
+nav ul {
+  display: grid;
+  grid-auto-flow: column; /* side-by-side buttons */
+  justify-content: end;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0;
+}
+
+
+nav a {
+  padding: 8px 12px;
+  background-color: #5b1ea9;
+  border-radius: 5px;
+  color: #fff;
+  transition: background-color 0.3s;
+}
+
+nav a:hover {
+  background-color: #42167e;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 2fr 1fr; 
+    gap: 20px;
+    padding: 20px;
+}
+
+.article {
+   display: flex;
+  gap: 20px; /* space between left and right columns */
+  margin-bottom: 30px;
+}
+
+.article .meta {
+  flex: 0 0 150px; /* fixed width for left side */
+  font-size: 14px;
+  white-space: pre-line; /* to preserve line breaks if you use \n */
+}
+
+.article .content {
+  flex: 1; /* take remaining space */
+}
+
+
+.article img {
+  max-width: 150px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+
+
+aside {
+    background-color: #4b0977; 
+    padding: 20px;
+    color: #fff; 
+}
+
+footer {
+    background-color: #130101; 
+    color: #fff; 
+    text-align: left;
+    padding: 20px;
+}
