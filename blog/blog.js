@@ -80,6 +80,14 @@ function generateArticles() {
         const articleDescription = document.createElement("p");
         articleDescription.textContent = article.description;
 
+        const readMoreLink = document.createElement("a");
+        readMoreLink.textContent = "Read More...";
+        readMoreLink.href = "#"; 
+        readMoreLink.style.color = "#007BFF"; 
+        readMoreLink.style.textDecoration = "underline";
+
+articleDescription.appendChild(readMoreLink);
+
         contentDiv.appendChild(articleTitle);
         contentDiv.appendChild(articleImage);
         contentDiv.appendChild(articleDescription);
