@@ -46,11 +46,9 @@ function generateArticles() {
         const articleDiv = document.createElement("div");
         articleDiv.classList.add("article");
 
-        // Create meta container (left column)
         const metaDiv = document.createElement("div");
         metaDiv.classList.add("meta");
 
-        // Create separate paragraphs for each meta item
         const articleDate = document.createElement("p");
         articleDate.textContent = article.date;
 
@@ -69,7 +67,6 @@ function generateArticles() {
         metaDiv.appendChild(articleGenre);
         metaDiv.appendChild(articleStars);
 
-        // Create content container (right column)
         const contentDiv = document.createElement("div");
         contentDiv.classList.add("content");
 
