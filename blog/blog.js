@@ -48,9 +48,14 @@ function generateArticles() {
 
         const metaDiv = document.createElement("div");
         metaDiv.classList.add("meta");
+        metaDiv.style.textAlign = "right";
+        
+        
 
         const articleDate = document.createElement("p");
         articleDate.textContent = article.date;
+        articleDate.style.fontSize = "18px";
+        
 
         const articleAges = document.createElement("p");
         articleAges.textContent = article.ages;
@@ -72,10 +77,15 @@ function generateArticles() {
 
         const articleTitle = document.createElement("h2");
         articleTitle.textContent = article.title;
+        articleTitle.style.color = "#8b0000"
 
         const articleImage = document.createElement("img");
         articleImage.src = article.imgSrc;
         articleImage.alt = article.imgAlt;
+        articleImage.style.display = "block";
+        articleImage.style.marginLeft = "auto";
+        articleImage.style.marginRight = "auto";
+
 
         const articleDescription = document.createElement("p");
         articleDescription.textContent = article.description;
