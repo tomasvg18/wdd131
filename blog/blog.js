@@ -78,6 +78,8 @@ function generateArticles() {
         const articleTitle = document.createElement("h2");
         articleTitle.textContent = article.title;
         articleTitle.style.color = "#8b0000"
+        articleTitle.style.marginBottom = "15px";
+
 
         const articleImage = document.createElement("img");
         articleImage.src = article.imgSrc;
