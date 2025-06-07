@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: sans-serif;
+    background: #db995b;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+  }
+  
+  h1 {
+    margin-bottom: 1rem;
+  }
+  
+  .creditcard-form {
+    display: grid;
+    grid-template-areas:
+      "front back"
+      "submit submit";
+    grid-template-columns: auto auto;
+    gap: 1rem;
+    position: relative;
+  }
+  
+  .card-front {
+    grid-area: front;
+    width: 340px;
+    min-height: 180px;
+    background: #89a0eb;
+    border-radius: 6px;
+    padding: 1rem;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+  
+    
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    position: relative;
+    z-index: 2;
+  }
+
+  .card-back {
+    grid-area: back;
+    width: 350px;
+    min-height: 120px;
+    background: #466ae0;
+    border-radius: 6px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+    margin-left: -240px;
+    margin-top: 40px;
+    display: grid;
+    grid-template-rows: 30px auto;
+    grid-template-columns: 1fr auto;
+    gap: 1rem;
+    padding: 1rem;
+    position: relative;
+    z-index: 1;
+  }
+
+    .card-image {
+    width: 40px;
+    height: auto;
+  }
+  
+  .card-top {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+  }
+  
+  .card-total {
+    font-weight: bold;
+  }
+  
+  .card-number {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .holder-expiration-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 1rem;
+  }
+  
+  .card-holder {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .expiration {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .expiration .exp-date-field {
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  .expiration .exp-date-field input {
+    width: 45px;
+    text-align: center;
+  }
+  
+  
+  
+  .mag-strip {
+    background-color: #222;
+    border-radius: 0;
+    grid-column: 1 / -1;
+    
+    margin: 0 -1rem;
+    width: calc(100% + 2rem);
+    height: 25px;
+  }
+  
+  .cvc {
+    grid-column: 2 / 3;
+    align-self: center;
+    justify-self: end;
+  }
+  
+  button {
+    grid-area: submit;
+    justify-self: end;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    border-radius: 4px;
+    background: #ffffff;
+    color: #000;
+    border: 1px solid #ccc;
+    cursor: pointer;
+  }
+  button:hover {
+    background: #e0e0e0;
+  }
+  
+  .input-group label {
+    font-size: 0.7rem;
+    font-weight: bold;
+    margin-bottom: 0.2rem;
+    text-transform: uppercase;
+  }
+  
+  .input-group input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0.4rem;
+    border: 1px solid #bbb;
+    border-radius: 4px;
+  }
+  
+  .cvc input {
+    width: 35px;      
+    padding: 0.3rem;  
+    text-align: center;
+  }
+  
