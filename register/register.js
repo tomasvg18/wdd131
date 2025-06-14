@@ -1,4 +1,4 @@
-import { participantTemplate } from './template.js';
+import { participantTemplate } from './Templates.js';
 
 var count = 1;
 
