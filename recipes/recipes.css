@@ -1,0 +1,230 @@
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
+
+:root {
+  --primary-color: #5c99e9;
+  --secondary-color: #32abdb;
+  --text-dark: #072450;
+  --text-light: #ebebeb;
+  --primary-font: 'Arial', Helvetica, sans-serif;
+  --secondary-font: 'Indie Flower', cursive;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--primary-font);
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header,
+main {
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1rem 0;
+}
+
+ footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-bottom: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.header-img {
+  width: 500px;
+  height: auto;
+}
+
+
+h1 {
+    font-family: var(--secondary-font);
+    font-size: 3.25rem;
+    margin: 0;
+    line-height: 1;
+    padding-bottom: 2rem;
+}
+
+h2 {
+    font-family: var(--secondary-font);
+    font-size: 1.75rem;
+    color: var(--secondary-color);
+    padding-top: 1.5rem;
+}
+
+
+
+.branding {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  
+}
+
+.branding img {
+  width: 70px;
+  height: auto;
+}
+
+header form {
+  display: flex;
+  width: 100%;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 1rem;
+}
+
+header input {
+  flex: 1;
+  border: 1px solid #000000;
+  border-right: none;
+  border-radius: 4px 0 0 4px;
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+header button {
+  border: 1px solid #000000;
+  border-left: none;
+  border-radius: 0 4px 4px 0;
+  padding: 0.5rem 1rem;
+  background: var(--primary-color);
+  color: #fff;
+  cursor: pointer;
+}
+
+main {
+  flex: 1;
+}
+
+.recipe {
+  border: 1px solid #000000;
+  border-radius: 4px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.recipe img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 0.5rem;
+}
+
+.tags {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+}
+
+.tag {
+  background: var(--secondary-color);
+  color: #fff;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+}
+.tag-label {
+  display: inline-block;
+  border: 1px solid black;
+  padding: 4px 0.5rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+
+.rating {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  padding-bottom: 1rem;
+}
+
+.description {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  font-weight: bold;
+}
+
+.social {
+flex-direction: column;
+align-items: center;
+}
+
+
+.social img {
+  width: 48px;
+  height: auto;
+}
+
+@media (min-width: 768px) {
+  .recipe {
+    display: flex;
+    align-items: flex-start;
+    text-align: left;
+  }
+  .recipe img {
+    width: 40%;
+    margin-right: 1rem;
+    margin-bottom: 0;
+  }
+  .recipe-content {
+    width: 60%;
+  }
+  .tags {
+    justify-content: flex-start;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .description {
+    display: none;
+  }
+
+  footer {
+    flex-direction: column; 
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .social {
+    display: flex;
+    flex-direction: row; 
+    justify-content: center;
+    order: -1; 
+    gap: 1rem;
+  }
+
+  .social a {
+    margin: 0;
+  }
+  .recipe > div {
+    text-align: left;
+    align-items: flex-end;
+  }
+
+  .rating {
+    justify-content: flex-end;
+  }
+
+  .tags {
+    justify-content: flex-end;
+  }
+}
