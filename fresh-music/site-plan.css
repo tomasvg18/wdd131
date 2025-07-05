@@ -41,6 +41,31 @@ Fonts are separated by a | */
   height: auto; 
 }
 
+.songart-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.songart-wrapper {
+  width: 180px;
+  height: 180px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.songart {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;         
+  border-radius: 10px;
+}
+
+
+
+
+
 
 /*  Look around below...but DON'T CHANGE ANYTHING! */
 
