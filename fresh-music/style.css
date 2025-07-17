@@ -155,7 +155,8 @@ p {
   gap: 1.5rem;
 }
 
-.controls button:not(.skipBtn) {
+.controls button:not(.skipBtn),
+#playPauseBtn {
   background-color: var(--accent2-color);
   color: var(--primary-color);
   border: none;
@@ -167,9 +168,8 @@ p {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  transition: transform 0.2s ease;
-  box-shadow: none;
 }
+
 
 .controls button:hover {
   transform: scale(1.1);
@@ -308,6 +308,19 @@ footer {
   border: 0;
 }
 
+button {
+  -webkit-appearance: none;
+  appearance: none;
+  background: none;
+  border: none;
+}
+
+h1 span {
+  display: block;
+}
+
+
+
 @media (max-width: 768px) {
   header {
     flex-direction: column;
@@ -326,4 +339,37 @@ footer {
   nav a {
     font-size: 1.3rem;
   }
+
+@media (max-width: 500px) {
+  .player-box {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .songart {
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+  }
+
+  .controls button {
+    width: 60px;
+    height: 60px;
+    font-size: 1.5rem;
+  }
+
+  .time-controls {
+    max-width: 90%;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .genre-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
 }
