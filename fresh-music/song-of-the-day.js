@@ -27,7 +27,7 @@ function getSongOfTheDay() {
   return allSongs[offset];
 }
 
-// Update the date label
+// Update the date displayed
 const dateEl = document.getElementById('sotd-date');
 if (dateEl) {
  const today = new Date();
@@ -58,7 +58,7 @@ setupPlayer(audio, playBtn, seekBar, currentTime, duration);
 const song = getSongOfTheDay();
 loadSongData(song, source, audio, art, title, artist, playBtn, false); // no autoplay
 
-// 🔁 Restart song on back button click
+// Restart song on back button click
 const backBtn = document.getElementById("backBtn");
 if (backBtn) {
   backBtn.addEventListener("click", () => {

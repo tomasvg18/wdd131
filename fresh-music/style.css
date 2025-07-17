@@ -212,7 +212,6 @@ p {
   background: none;
 }
 
-/* ✅ Unified time-controls layout using grid */
 .time-controls {
   display: grid;
   grid-template-columns: auto 1fr auto;

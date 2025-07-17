@@ -13,7 +13,7 @@ const seekBar = document.getElementById("seekBar");
 const currentTimeDisplay = document.getElementById("currentTime");
 const durationDisplay = document.getElementById("duration");
 
-// Initialize player logic
+// player logic
 setupPlayer(audioPlayer, playPauseBtn, seekBar, currentTimeDisplay, durationDisplay);
 
 let currentGenre = null;
@@ -56,13 +56,13 @@ document.getElementById("prevBtn").addEventListener("click", () => {
   lastBackClickTime = now;
 
   if (!currentGenre) {
-    // SOTD fallback: just restart
+    // SOTD: just restart
     audioPlayer.currentTime = 0;
     return;
   }
 
   if (audioPlayer.currentTime > 3 && !isDoubleClick) {
-    // Restart current song if it's been playing more than 3 seconds
+    // Restart current song on back if it's been playing more than 3 seconds
     audioPlayer.currentTime = 0;
   } else {
     // Go to previous song

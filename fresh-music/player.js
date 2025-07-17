@@ -12,9 +12,9 @@ function loadSongData(song, sourceEl, audioEl, artEl, titleEl, artistEl, playBtn
 
   if (shouldAutoplay) {
     audioEl.play();
-    playBtn.innerHTML = "❚❚"; // pause icon
+    playBtn.innerHTML = "❚❚"; 
   } else {
-    playBtn.innerHTML = "▶"; // play icon
+    playBtn.innerHTML = "▶"; 
   }
 
   titleEl.textContent = song.title;
