@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fresh Music</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <img class="logo" src="images/cm-logo-hz.png" alt="Fresh Music Logo" />
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="song-of-the-day.html">Song of the Day</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="intro">
+      <h1>Welcome to Fresh Music</h1>
+      <p>Discover clean, chill, copyright-free music to help you study, relax, or vibe.</p>
+      <p>Pick a genre and start listening — it's that easy.</p>
+    </section>
+
+    <section class="genre-select">
+  <div class="genre-grid">
+    <button class="genre-btn" data-genre="country" aria-label="Play Country Music">Country</button>
+    <button class="genre-btn" data-genre="rock" aria-label="Play Rock Music">Rock</button>
+    <button class="genre-btn" data-genre="edm" aria-label="Play EDM Music">EDM</button>
+    <button class="genre-btn" data-genre="lofi" aria-label="Play lofi Music">Lo-Fi</button>
+    <button class="genre-btn" data-genre="pop" aria-label="Play Pop Music">Pop</button>
+    <button class="genre-btn" data-genre="hiphop" aria-label="Play HipHop Music">Hip-Hop</button>
+  </div>
+</section>
+
+
+    <section class="song-display">
+      <div id="songPlayer" class="player-box">
+        <img id="songArt" class="songart" src="images/blank-album-cover.png" alt="Album Art" />
+        <div class="player-info">
+          <h2 id="songTitle">Song Title</h2>
+          <p id="songArtist">Artist Name</p>
+
+        <div class="controls">
+        <button id="prevBtn" class="skipBtn" aria-label="Previous song">&#9198;</button>
+        <button id="playPauseBtn" aria-label="Play or pause song">&#10074;&#10074;</button>
+        <button id="nextBtn" class="skipBtn" aria-label="Next song">&#9197;</button>
+        </div>
+
+
+          <div class="time-controls">
+          <span id="currentTime">0:00</span>
+          <label for="seekBar" class="sr-only">Seek bar</label>
+          <input type="range" id="seekBar" value="0" step="0.1" min="0" />
+          <span id="duration">0:00</span>
+          </div>
+
+
+
+          </div>
+
+          <audio id="audioPlayer">
+            <source id="audioSource" src="" type="audio/mpeg" />
+            Your browser does not support the audio element.
+          </audio>
+        </div>
+      </div>
+    </section>
+
+    <section class="random">
+      <p>Feeling adventurous?</p>
+      <button id="randomBtn" aria-label="Play a random song">Random Song</button>
+    </section>
+
+    <section class="gallery">
+      <div class="songart-grid"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; Fresh Music 2025</p>
+  </footer>
+
+  <script type="module" src="main.js"></script>
+</body>
+</html>

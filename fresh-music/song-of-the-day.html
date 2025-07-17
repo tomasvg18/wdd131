@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Song of the Day | Fresh Music</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <img class="logo" src="images/cm-logo-hz.png" alt="Fresh Music Logo" />
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="song-of-the-day.html">Song of the Day</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Song of the Day</h1>
+    <p id="sotd-date"></p>
+
+   <div class="player-box" id="dailyPlayer">
+  <img id="dailyArt" class="songart" src="cm-logo-thumb.png" alt="Album Art" />
+
+  <div class="player-info">
+    <h2 id="songTitle" class="song-title">Song Title</h2>
+    <p id="songArtist" class="song-artist">Artist Name</p>
+
+    <div class="controls">
+      <button class="skipBtn" id="backBtn" aria-label="Restart Song">⏮</button>
+      <button id="dailyPlayPauseBtn" aria-label="Play or Pause">▶</button>
+      <button class="skipBtn" disabled aria-label="Next Song (Disabled)">⏭</button>
+    </div>
+
+    <div class="time-controls">
+      <label for="dailySeekBar" class="visually-hidden">Seek Bar</label>
+      <span id="dailyCurrentTime">0:00</span>
+      <input
+        type="range"
+        id="dailySeekBar"
+        value="0"
+        min="0"
+        step="0.1"
+        aria-label="Seek through the song"
+      />
+      <span id="dailyTotalTime">0:00</span>
+    </div>
+  </div>
+
+  <audio id="dailyAudio" aria-label="Audio Player">
+    <source id="dailySource" src="" type="audio/mpeg" />
+    Your browser does not support the audio element.
+  </audio>
+</div>
+
+
+    <p style="color: var(--accent2-color); margin-top: 1rem;">
+      Loving the song of the day? Us too. Check back every day at 12am for a new song!
+    </p>
+  </main>
+
+  <footer>
+    © Fresh Music 2025
+  </footer>
+
+  
+  <script type="module" src="song-of-the-day.js"></script>
+
+
+</body>
+</html>
